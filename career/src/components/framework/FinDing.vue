@@ -1,0 +1,35 @@
+<template>
+    <div class="mt-4">
+    <el-input
+      v-model="input3"
+      style="max-width: 600px"
+      placeholder="输入企业名称"
+      class="input-with-select"
+    >
+      <template #prepend>
+        <el-select v-model="select" placeholder="Select" style="width: 115px">
+          <el-option label="Restaurant" value="1" />
+          <el-option label="Order No." value="2" />
+          <el-option label="Tel" value="3" />
+        </el-select>
+      </template>
+      <template #append>
+        <el-button icon="el-icon-search" />搜索
+      </template>
+    </el-input>
+  </div>
+</template>
+<script>
+export default{
+    data(){
+        return {
+          input3:''
+        }
+    }
+}
+</script>
+<style>
+.input-with-select .el-input-group__prepend {
+  background-color: var(--el-fill-color-blank);
+}
+</style>
